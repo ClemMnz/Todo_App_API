@@ -15,7 +15,8 @@ Il faut d'abord créer un fichier .env à la racine du repo Todo_App_API, avec l
 
 Dans le répertoire Middlewares , le fichier checkJwt, la variable jwtURI à modifier en mettant son ISSUER.
 
-Dans le répertoire 'frontend', il y a le fichier 'config.js' à modifier qui se trouve dans le répertoire 'utils':
+Dans le repo 
+Todo_App_Client , il y a le fichier 'config.js' à modifier qui se trouve dans le répertoire 'utils':
 
 - AUTH0_AUDIENCE 
 - AUTH0_DOMAIN 

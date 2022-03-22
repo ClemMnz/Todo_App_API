@@ -1,8 +1,6 @@
 # Todo_App_API
 Backend of Todo_App
 
-## Challenge GLADIA
-
 ### Configuration et lancement de l'application
 
 Il faut d'abord créer un fichier .env à la racine du repo Todo_App_API, avec les variables suivantes: 

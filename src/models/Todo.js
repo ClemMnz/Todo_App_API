@@ -14,14 +14,14 @@ const todoSchema = new Schema({
   description: {
     type: String,
     trim: true,
-    required: [true, "Description required"],
+    required: [true, "Description obligatoire"],
     minlength: [3, "3 caractères au minimum"],
     maxlength: [200, "200 caractères au maximum"],
   },
   status: {
     type: String,
     default: "Nouvelle",
-    required: [true, "Status required"],
+    required: [true, "Statut obligatoire"],
     enum: STATUS,
   },
   user: { type: String, required: [true, "User obligatoire"] },
@@ -33,6 +33,8 @@ const todoSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  responsible: { type: String, ref: "Task" },
+
 });
 
 todoSchema.method("toJSON", function () {

@@ -1,7 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import router from "./routes/router";
+import taskRouter from "./routes/taskRouter";
+import personRouter from "./routes/personRouter";
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -16,7 +17,8 @@ mongoose
   .then(() => console.log("Database connected"))
   .catch((error) => console.error(error, "Erreur lors de la connection à la db."));
 
-app.use("/api", router);
+app.use("/api/task", taskRouter);
+app.use("/api/person", personRouter);
 
 const PORT = process.env.PORT || 5001;
 
